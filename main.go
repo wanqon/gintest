@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"gin_test/pkg/setting"
+	"gintest/pkg/setting"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -20,6 +20,7 @@ func main() {
 		WriteTimeout:setting.WriteTimeout,
 		MaxHeaderBytes:1<<20,
 	}
+	fmt.Println(setting.HTTPPort)
 
 	s.ListenAndServe()
 }
